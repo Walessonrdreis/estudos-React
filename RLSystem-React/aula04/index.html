@@ -4,37 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     
 
     <title>Document</title>
+
 </head>
 <body>
     <div id="root"></div>
+    <div id="obs"></div>
 
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="./index.js"></script>
 <script type="text/babel">
+    var menu = null;
+
+    function getLanguage(){
+        if(navigator.language == 'pt-BR'){
+            return <h1>Brasíl</h1>
+
+        } else{
+            return <h1>Outro País</h1>
+        }
+    }
+    
+        if(navigator.language == 'pt-BR'){
+            menu = {
+                 home: 'Página Inicial',
+                 company: 'Empresa'
+    }
+    } else {
+            menu = {
+                home: 'Home',
+                company: 'Company'
+    }
+
+        }
+
     const name = 'Walesson';
+    const soma = 2 + 2;
+    
     const nav = (
         <nav className="links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Empresa</a></li>
+                <li><a href="#">{menu.home}</a></li>
+                <li><a href="#">{menu.company}</a></li>
                 <li><a href="#">Contato</a></li>
+                <li><a href="#">{soma}</a></li>
                 <li><a href="#">{name}</a>
                     <ul>
                         <li><a href="#">facebook</a></li>
                     </ul>
+                    
                 </li>
-            
+                
             </ul>
+            <div className="text">{getLanguage()}</div>
         </nav>
     )
+    const Observation = (
+        
+            <div>
+                <p>Como JSX é mais próximo de JavaScript que do HTML, ReactDOM usa camelCase como convenção para nomes de proprie4dades ao invés  dos nome de atributos do HTML</p>
+                <p>Por exemplo, class se tranforma em className em JSX, e tabindex se tranforma em tabIndex.</p>
+
+            </div>
+            
+            
+       
 
 
-ReactDOM.render(nav, document.getElementById('root'));
+    )
+        
+    
+
+    ReactDOM.render(nav, document.getElementById('root'));
+    ReactDOM.render(Observation, document.getElementById('obs'));
 
 </script>
 
