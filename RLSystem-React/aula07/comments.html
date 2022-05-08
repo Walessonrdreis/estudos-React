@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="root" style="background-color: rgb(107, 98, 98) ; color:aqua" ></div><!--ROOT--NÓ PRINCIPAL DA MINHA APLICAÇÃO, BASICAMENTE É COMO SE ELE FOSSE NOSSO INICIO,    é onde tudo vai começar-->
+    
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+        function formatDate(date){
+            return date.toLocaleDateString();
+
+        }
+        function Avatar(props){
+            return(
+                <img className="Avatar" 
+                        src={props.user.avatarURL} 
+                        alt={props.user.name}
+                        />
+
+            );
+        }
+
+        function UserInfo(props){
+            return(
+                <div className="UserInfo">
+                    <Avatar user={props.user}/>
+                    <div className="UserInfo-name">
+                        {props.user.name}
+                    </div> 
+                </div> 
+
+            );
+        }
+
+       /* function Comments(props){
+            return (
+                <div className="comment">
+                    <div className="UserInfo">
+                        <img className="Avatar" 
+                        src={props.author.avatarURL} 
+                        alt={props.author.name}
+                        />
+                        <div className="UserInfo-name">
+                            {props.author.name}
+
+                        </div>
+                        
+
+                        <div className="Comment-text">
+                            {props.text}
+                        </div>
+                        <div className="Comments-date">
+                            {formatDate(props.date)}
+                        </div>
+                    </div>
+                </div>
+
+            );
+        }
+        Diferença entre o código de cima para o de baixo
+       */
+        function Comments(props){
+            return (
+                <div className="comment">
+                    <UserInfo user={props.author}/>
+                    <div className="Comment-text">
+                         {props.text}
+                    </div>
+
+                    <div className="Comments-date">
+                        {formatDate(props.date)}
+                    </div>
+
+
+                    
+                </div>
+              
+
+            );
+        }
+    
+        const comment = {
+            date: new Date(),
+            text:'Estou gostando muito do curso ',
+            author:{
+                name:'Walesson',
+                avatarURL:'https://th.bing.com/th/id/OIP.KvUTKL7e-m5anX9nz4NvRwHaHa?w=171&h=180&c=7&r=0&o=5&pid=1.7'
+            },
+        };
+        
+        const app =(
+            <div>
+                <Comments
+                    date={comment.date}
+                    text={comment.text}
+                    author={comment.author}
+                />
+            </div>
+        )
+
+        
+       //Versão Clean     
+       ReactDOM.render(app, document.getElementById('root'));
+       
+       /* Versão completa
+       ReactDOM.render(
+        <Comments
+                    date={comment.date}
+                    text={comment.text}
+                    author={comment.author}
+                />
+           , document.getElementById('root'));*/
+  
+    </script>
+
+</body>
+</html>
