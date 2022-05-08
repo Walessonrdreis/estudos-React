@@ -45,28 +45,34 @@
 
     const name = 'Walesson';
     const soma = 2 + 2;
-    
-    const nav = (
-        <nav className="links">
-            <ul>
-                <li><a href="#">{menu.home}</a></li>
-                <li><a href="#">{menu.company}</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">{soma}</a></li>
-                <li><a href="#">{name}</a>
-                    <ul>
-                        <li><a href="#">facebook</a></li>
-                    </ul>
-                    
-                </li>
-                
-            </ul>
-            <div className="text">{getLanguage()}</div>
-            <div className="text">{new Date().toTimeString()}</div>
 
-        </nav>
-    )
-    const Observation = (
+    function refresh(){
+             const nav = (
+                 <nav className="links">
+                    <ul>
+                        <li><a href="#">{menu.home}</a></li>
+                        <li><a href="#">{menu.company}</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">{soma}</a></li>
+                         <li><a href="#">{name}</a>
+                            <ul>
+                        <li><a href="#">facebook</a></li>
+                            </ul>
+                    
+                        </li>
+                
+                    </ul>
+                    <div className="text">{getLanguage()}</div>
+                    <div className="text">{new Date().toTimeString()}</div>
+
+                </nav>
+            )
+            ReactDOM.render(nav, document.getElementById('root'));
+    }
+    setInterval(refresh, 1000);/*O react só atualiza o que for necessário*/
+
+
+    /*const Observation = (
         
             <div>
                 <p>Como JSX é mais próximo de JavaScript que do HTML, ReactDOM usa camelCase como convenção para nomes de propriedades ao invés  dos nome de atributos do HTML</p>
@@ -78,12 +84,12 @@
        
 
 
-    )
+    )/*
         
     
 
-    ReactDOM.render(nav, document.getElementById('root'));
-    ReactDOM.render(Observation, document.getElementById('obs'));
+  
+   /* ReactDOM.render(Observation, document.getElementById('obs'));*/
 
 </script>
 

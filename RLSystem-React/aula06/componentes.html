@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="root"></div><!--ROOT--NÓ PRINCIPAL DA MINHA APLICAÇÃO, BASICAMENTE É COMO SE ELE FOSSE NOSSO INICIO,    é onde tudo vai começar-->
+    
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        /*A maneira mais fácil de criar um componente é criando um função */
+        function Welcome(props){
+            return <h1>Olá, {props.name}</h1>
+        }
+
+        const elemento = <Welcome name="RL System"/>
+        ReactDOM.render(elemento, document.getElementById('root'));
+  
+    </script>
+
+</body>
+</html>
