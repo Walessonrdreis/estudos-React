@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div id="root"></div><!--ROOT--NÓ PRINCIPAL DA MINHA APLICAÇÃO, BASICAMENTE É COMO SE ELE FOSSE NOSSO INICIO,    é onde tudo vai começar-->
+    <div id="root" style="background-color: rgb(107, 98, 98) ; color:aqua" ></div><!--ROOT--NÓ PRINCIPAL DA MINHA APLICAÇÃO, BASICAMENTE É COMO SE ELE FOSSE NOSSO INICIO,    é onde tudo vai começar-->
     
 
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
@@ -20,12 +20,43 @@
 
     <script type="text/babel">
         /*A maneira mais fácil de criar um componente é criando um função */
-        function Welcome(props){
+        function Welcome(props){/*Se o elemento possuir nomenclatura inicial com letra minuscula o react vai tratar como elemento (tag) do DOm ocasionando erro*/
             return <h1>Olá, {props.name}</h1>
         }
+        function App(){
+            return(
+                <div>
+                    <Welcome name="RL System"/>
+                    <Welcome name="Walesson"/>
+                    <Welcome name="Curso de React"/>
 
-        const elemento = <Welcome name="RL System"/>
-        ReactDOM.render(elemento, document.getElementById('root'));
+                </div>
+
+            );
+
+        }
+
+        /*//ES6
+        class Welcome2 extends React.Component{
+            render(){
+                return <h1>Olá, {this.props.name}</h1>
+
+            }
+        }
+        ReactDOM.render(<Welcome2 name="RL"/>,document.getElementById('root')); */
+
+
+        const elemento = 
+        
+            <div>
+            <Welcome name="RL System"/>
+            <Welcome name="Walesson"/>
+            </div>    
+
+
+        
+
+       ReactDOM.render(<App/>, document.getElementById('root'));
   
     </script>
 
