@@ -1,11 +1,16 @@
-function tick(){
-    const element = (
+function Clock(props){
+    return (
         <div>
-            <h1>Olá</h1>
-            <h2>São: {new Date().toLocaleTimeString()}</h2>
-        </div>
+        <h1>Olá</h1>
+        <h2>São: {props.date.toLocaleTimeString()}</h2>
+    </div>
+       
     );
-
-    ReactDOM.render(element, document.getElementById('root'));
 }
+function tick(){
+    ReactDOM.render(<Clock date={new Date()}/>, document.getElementById('root'));
+
+}
+
+
 setInterval(tick,1000)
