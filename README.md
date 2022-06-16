@@ -30,3 +30,10 @@ React.render(<App/>, document.getElementById("root"));
 E de suam importância realizar-se a extração de componentes grandes em menores, acaba deixando o código mais clean, mais limpo e fácil de entender e e reconfigurar, assim com reutilizar 
 
 Estado e ciclo de vida:
+setInterval(refresh,1000); maneira de atualizar a user interface
+
+O state é similar ao props, mas ele é privado, pertence ao componente, e é totalmente controlado pelo próprio componente
+
+Usando o ECMAScript6 é necessário adicionar o this. antes do props, o props apenas não funcionara 
+
+Dentro de um componente eu possuo métodos de ciclo de vida, são chamados de mounting e unmounting 
