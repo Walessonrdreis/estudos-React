@@ -4,3 +4,7 @@
 Yarn é um gerenciamento de Dependência.
 
 Configurando Context.js que terá as classes `themeReducer e ThemeProvider `para configurar o tema do site.
+
+Adicionado configuração do estilo do App
+
+criação dos diretórios components, fonts e img
