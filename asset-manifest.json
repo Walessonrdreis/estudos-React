@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/estudos-React/projetos/personal-portifolio/static/css/main.36efff1b.css",
+    "main.js": "/estudos-React/projetos/personal-portifolio/static/js/main.4b410ef9.js",
+    "static/media/Gumela Regular.otf": "/estudos-React/projetos/personal-portifolio/static/media/Gumela Regular.0ae83c6988a536716eb4.otf",
+    "index.html": "/estudos-React/projetos/personal-portifolio/index.html",
+    "main.36efff1b.css.map": "/estudos-React/projetos/personal-portifolio/static/css/main.36efff1b.css.map",
+    "main.4b410ef9.js.map": "/estudos-React/projetos/personal-portifolio/static/js/main.4b410ef9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36efff1b.css",
+    "static/js/main.4b410ef9.js"
+  ]
+}
