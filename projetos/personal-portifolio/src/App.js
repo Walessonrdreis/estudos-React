@@ -1,6 +1,7 @@
 import "./App.css";
 import {useContext} from "react";
 import {themeContext} from "./Context";
+import Navbar from "./components/Navbar/Navbar"
 
 
 function App(){
@@ -14,6 +15,7 @@ function App(){
       color: darkMode ? "white" : "",
     }}
     >
+    <Navbar />
     <h1>Testado App</h1>
 
     </div>
