@@ -2,6 +2,7 @@ import "./App.css";
 import {useContext} from "react";
 import {themeContext} from "./Context";
 import Navbar from "./components/Navbar/Navbar"
+import Intro from "./components/Intro/Intro"
 
 
 function App(){
@@ -16,7 +17,8 @@ function App(){
     }}
     >
     <Navbar />
-    <h1>Testado App</h1>
+    <Intro />
+    
 
     </div>
   )
