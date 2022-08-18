@@ -9,14 +9,14 @@ obs:
  A maneira mais fácil de se criar componentes é através de uma função.
 
 Agora com o ecma6 é possível pela criação de class
-ex: 
+ex: ``` javascript
 class Welcome extends React.Component{
     render() {
         return <h1>Olá, }{this.props.name}
     }
 }
 ReactDom.render(<Welcome name="RL"/>, document.getElementById("root"));
-
+```
 O react permite que um componente interaja com varios componentes, é bem comum por exemplo encontrar apenas um componente <App> em um único programa 
 ex:
 function App() {
