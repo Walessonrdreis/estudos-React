@@ -1,0 +1,21 @@
+import React, {createContext, useState} from "react";
+import { IAuthProvider, IContext, IUser } from "./types";
+
+export const AuthContext = createContext<IContext>({}as IContext)
+async function authenticate(email:string, password:string){
+
+}
+function logout (){
+
+}
+
+
+export const AuthProvider = ({children}: IAuthProvider) => {
+  const [user, setUser] = useState<IUser | null>()
+  return (
+    <AuthContext.Provider value={{...user, authenticate, logout }}>
+
+    </AuthContext.Provider>
+  )
+}
+
